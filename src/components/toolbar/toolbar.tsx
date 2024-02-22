@@ -25,6 +25,8 @@ export function Toolbar() {
         <span className="sr-only">Send me a message</span>
       </ToastButton>
 
+      <ThemeToggle />
+
       <TooltipLink
         content="Check out my GitHub"
         href="https://github.com/cody-hoffman"
@@ -42,8 +44,6 @@ export function Toolbar() {
         <LinkedInLogoIcon className="h-5 w-5 stroke-1" />
         <span className="sr-only">Check out my LinkedIn</span>
       </TooltipLink>
-
-      <ThemeToggle />
     </div>
   );
 }
