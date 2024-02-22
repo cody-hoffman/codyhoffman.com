@@ -7,7 +7,7 @@ export default function Golf() {
         Golf &nbsp;&nbsp;⛳️
       </h1>
       <p className="mt-8 text-xl text-muted-foreground tracking-wide">
-        Like my work, I take a data drive approach to golf. I use{" "}
+        Like my work, I take a data driven approach to golf. I use{" "}
         <Link
           className="underline"
           href="https://www.arccosgolf.com/"

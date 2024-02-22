@@ -5,6 +5,8 @@ This is site is powered by:
 - Next.js
 - Vercel
 - Shadcn UI
+- Bun
+- Typescript
 
 ## Getting Started
 
