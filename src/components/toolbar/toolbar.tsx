@@ -8,7 +8,7 @@ import { TooltipLink } from "./tooltip-link";
 
 export function Toolbar() {
   return (
-    <div className="flex items-center justify-between rounded-full bg-zinc-800 p-2 max-w-max fixed bottom-6 left-1/2 translate-center space-x-1">
+    <div className="flex items-center justify-between rounded-full bg-zinc-800 p-2 max-w-max fixed bottom-3 md:bottom-6 left-1/2 translate-center space-x-1">
       <TooltipLink content="Home" href="/">
         <Avatar className="h-[30px] w-[30px]">
           <AvatarImage src="/headshot.jpeg" />
