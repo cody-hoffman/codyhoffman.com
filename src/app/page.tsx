@@ -26,10 +26,10 @@ export default function Home() {
         passionate team.
       </p>
       <p className="mt-6 text-xl text-muted-foreground tracking-wide">
-        When I&apos;m not at work you can find me on the golf course. See how
-        I&apos;ve been{" "}
+        When I&apos;m not at work you can find me on the golf course. See more
+        on my{" "}
         <Link className="underline" href="/golf">
-          playing
+          golf page
         </Link>
         .
       </p>
