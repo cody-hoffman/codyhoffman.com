@@ -21,15 +21,17 @@ export function MessageTooltipButton({ children, tooltip }: Props) {
     <TooltipProvider>
       <TooltipBase>
         <TooltipTrigger asChild>
-          <MessagingDialog>
-            <Button
-              className="text-zinc-100 rounded-full hover:bg-zinc-600 hover:text-zinc-100"
-              size="icon"
-              variant="ghost"
-            >
-              {children}
-            </Button>
-          </MessagingDialog>
+          <div>
+            <MessagingDialog>
+              <Button
+                className="text-zinc-100 rounded-full hover:bg-zinc-600 hover:text-zinc-100"
+                size="icon"
+                variant="ghost"
+              >
+                {children}
+              </Button>
+            </MessagingDialog>
+          </div>
         </TooltipTrigger>
         <TooltipContent>
           <p>{tooltip}</p>
