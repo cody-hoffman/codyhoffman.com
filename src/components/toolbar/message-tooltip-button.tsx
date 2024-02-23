@@ -7,7 +7,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { toast } from "sonner";
+import { MessagingDialog } from "../messaging/dialog";
 
 interface Props {
   children: React.ReactNode;
@@ -16,29 +16,20 @@ interface Props {
   tooltip: string;
 }
 
-export function ToastButton({
-  children,
-  description,
-  heading,
-  tooltip,
-}: Props) {
+export function MessageTooltipButton({ children, tooltip }: Props) {
   return (
     <TooltipProvider>
       <TooltipBase>
         <TooltipTrigger asChild>
-          <Button
-            className="text-zinc-100 rounded-full hover:bg-zinc-600 hover:text-zinc-100"
-            onClick={() =>
-              toast(heading, {
-                description,
-                action: { label: "Close", onClick: () => console.log("Close") },
-              })
-            }
-            size="icon"
-            variant="ghost"
-          >
-            {children}
-          </Button>
+          <MessagingDialog>
+            <Button
+              className="text-zinc-100 rounded-full hover:bg-zinc-600 hover:text-zinc-100"
+              size="icon"
+              variant="ghost"
+            >
+              {children}
+            </Button>
+          </MessagingDialog>
         </TooltipTrigger>
         <TooltipContent>
           <p>{tooltip}</p>

@@ -3,7 +3,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 
-import { ToastButton } from "./toast-button";
+import { MessageTooltipButton } from "./message-tooltip-button";
 import { TooltipLink } from "./tooltip-link";
 
 export function Toolbar() {
@@ -16,14 +16,14 @@ export function Toolbar() {
         </Avatar>
       </TooltipLink>
 
-      <ToastButton
+      <MessageTooltipButton
         description="I'm working on the messaging feature"
         heading="Check back soon!"
         tooltip="Send me a message"
       >
         <MessageCircleIcon className="h-6 w-6 stroke-1" />
         <span className="sr-only">Send me a message</span>
-      </ToastButton>
+      </MessageTooltipButton>
 
       <ThemeToggle />
 
