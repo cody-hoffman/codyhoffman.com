@@ -17,11 +17,11 @@ export default function Golf() {
         </Link>{" "}
         to track my shots.
       </p>
-      <p className="mt-8 text-xl text-muted-foreground tracking-wide">
+      <p className="mt-6 text-xl text-muted-foreground tracking-wide">
         I&apos;m trying to get access to their APIs to automate the content on
         this page.
       </p>
-      <p className="mt-8 text-xl text-muted-foreground tracking-wide">
+      <p className="mt-6 text-xl text-muted-foreground tracking-wide">
         Stay tuned.
       </p>
     </main>
