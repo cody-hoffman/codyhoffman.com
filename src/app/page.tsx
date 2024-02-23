@@ -29,9 +29,9 @@ export default function Home() {
         When I&apos;m not at work you can find me on the golf course. See more
         on my{" "}
         <Link className="underline" href="/golf">
-          golf page
-        </Link>
-        .
+          golf
+        </Link>{" "}
+        page.
       </p>
     </main>
   );
