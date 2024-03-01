@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme/theme-provider";
@@ -39,6 +40,7 @@ export default function RootLayout({
           {children}
           <Toolbar />
           <Analytics />
+          <SpeedInsights />
           <Toaster />
         </ThemeProvider>
       </body>
