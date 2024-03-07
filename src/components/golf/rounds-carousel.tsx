@@ -23,25 +23,23 @@ export function RoundsCarousel() {
       <CarouselContent>
         {rounds.map((round, index) => (
           <CarouselItem key={index}>
-            <div className="p-1">
-              <Card className="flex flex-col sm:flex-row items-center justify-between sm:py-6 pb-6">
-                <CardHeader className="max-w-64">
-                  <CardTitle className="truncate">{round.courseName}</CardTitle>
-                  <CardDescription>
-                    {round.noOfHoles} holes &bull; {formatDate(round.startTime)}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="flex aspect-auto items-center p-0 sm:pr-6">
-                  <span className="text-3xl font-semibold">
-                    {round.noOfShots}&nbsp;
-                    <span className="text-muted-foreground">
-                      ({getSign(round.overUnder)}
-                      {round.overUnder})
-                    </span>{" "}
-                  </span>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="flex flex-col sm:flex-row items-center justify-between sm:py-6 pb-6">
+              <CardHeader className="max-w-64">
+                <CardTitle className="truncate">{round.courseName}</CardTitle>
+                <CardDescription>
+                  {round.noOfHoles} holes &bull; {formatDate(round.startTime)}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex aspect-auto items-center p-0 sm:pr-6">
+                <span className="text-3xl font-semibold">
+                  {round.noOfShots}&nbsp;
+                  <span className="text-muted-foreground">
+                    ({getSign(round.overUnder)}
+                    {round.overUnder})
+                  </span>{" "}
+                </span>
+              </CardContent>
+            </Card>
           </CarouselItem>
         ))}
       </CarouselContent>
