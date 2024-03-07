@@ -1,4 +1,7 @@
-import Link from "next/link";
+import { ClubDataCarousel } from "@/components/golf/club-distances-chart";
+import { RoundsCarousel } from "@/components/golf/rounds-carousel";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { playerProfile } from "@/data/golf";
 
 export default function Golf() {
   return (
@@ -6,24 +9,22 @@ export default function Golf() {
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight md:text-5xl">
         Golf &nbsp;&nbsp;⛳️
       </h1>
-      <p className="mt-8 text-xl text-muted-foreground tracking-wide">
-        Like my work, I take a data driven approach to golf. I use{" "}
-        <Link
-          className="underline"
-          href="https://www.arccosgolf.com/"
-          target="_blank"
-        >
-          Arccos
-        </Link>{" "}
-        to track my shots.
+      <p className="mt-8 text-base sm:text-xl text-muted-foreground tracking-wide">
+        {playerProfile.handicap} Handicap &bull; {playerProfile.shotsPlayed}{" "}
+        Shots &bull; {playerProfile.totalRounds} Rounds
       </p>
-      <p className="mt-6 text-xl text-muted-foreground tracking-wide">
-        I&apos;m trying to get access to their APIs to automate the content on
-        this page.
-      </p>
-      <p className="mt-6 text-xl text-muted-foreground tracking-wide">
-        Stay tuned.
-      </p>
+      <Tabs defaultValue="rounds" className="mt-6 w-full">
+        <TabsList className="grid w-full grid-cols-2">
+          <TabsTrigger value="rounds">Recent Rounds</TabsTrigger>
+          <TabsTrigger value="distances">Club Distances</TabsTrigger>
+        </TabsList>
+        <TabsContent value="rounds">
+          <RoundsCarousel />
+        </TabsContent>
+        <TabsContent value="distances">
+          <ClubDataCarousel />
+        </TabsContent>
+      </Tabs>
     </main>
   );
 }
